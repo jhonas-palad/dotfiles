@@ -2,7 +2,7 @@ if( -not $env:DOTFILES_PATH){
 	[System.Environment]::SetEnvironmentVariable('DOTFILES_PATH', 'D:\dotfiles', [System.EnvironmentVariableTarget]::User)
 }
 
-$omptheme="jhonas"
+$omptheme="jhonas2"
 
 oh-my-posh init pwsh --config "$env:DOTFILES_PATH\ohmyposh\$omptheme.omp.json" | Invoke-Expression
 

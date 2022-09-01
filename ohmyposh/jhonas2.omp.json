@@ -1,0 +1,78 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "alignment": "left",
+        "segments": [
+            {
+                "foreground": "#838383",
+                "style": "plain",
+                "template": "<#838383>[</>{{ .CurrentDate | date .Format }}<#838383>]</> ",
+                "type": "time"
+            },
+            {
+                "type": "session",
+                "style": "plain",
+                "foreground": "#45F1C2",
+                "template": "{{ if .SSHSession }}\uf817{{ end }}{{ .UserName }}@{{ .HostName }}"
+                
+            },
+            {
+                "foreground": "#0CA0D8",
+                "properties": {
+                "folder_separator_icon": "/",
+                "style": "full"
+                },
+                "style": "plain",
+                "template": " {{ .Path }}",
+                "type": "path"
+            },
+            {
+                "foreground": "#c53145",
+                "powerline_symbol": "\ue0b0",
+                "properties": {
+                "fetch_stash_count": true,
+                "fetch_upstream_icon": false,
+                "branch_icon": "\ue725 ",
+                "cherry_pick_icon": "\ue29b ",
+                "commit_icon": "\uf417 ",
+                "fetch_status": false,
+                "merge_icon": "\ue727 ",
+                "no_commits_icon": "\uf594 ",
+                "rebase_icon": "\ue728 ",
+                "revert_icon": "\uf0e2 ",
+                "tag_icon": "\uf412 "
+                },
+                "style": "plain",
+                "template": " <#eeeeee>\u01c0</> {{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+                "type": "git"
+            }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+            {
+                "type": "shell",
+                "style": "plain",
+                "foreground": "#ffee00",
+                "properties": {
+                  "mapped_shell_names": {
+                    "pwsh": "\uf054",
+                    "bash": "\uf155",
+                    "zsh": "zsh"
+                  }
+                },
+                "template": "{{.Name}} "
+            }
+          
+        ],
+        "type": "prompt"
+      }
+      
+    ],
+    "version": 2
+  }
+  
