@@ -4,17 +4,12 @@
       {
         "alignment": "left",
         "segments": [
-            {
-                "foreground": "#838383",
-                "style": "plain",
-                "template": "<#838383>[</>{{ .CurrentDate | date .Format }}<#838383>]</> ",
-                "type": "time"
-            },
+            
             {
                 "type": "session",
                 "style": "plain",
                 "foreground": "#45F1C2",
-                "template": "{{ if .SSHSession }}\uf817{{ end }}{{ .UserName }}@{{ .HostName }}"
+                "template": "{{ if .SSHSession }}\uf817{{ end }}{{ .UserName }}@{{ .HostName }} "
                 
             },
             {
@@ -24,7 +19,7 @@
                 "style": "full"
                 },
                 "style": "plain",
-                "template": " {{ .Path }}",
+                "template": "{{ .Path }} ",
                 "type": "path"
             },
             {
@@ -32,7 +27,7 @@
                 "powerline_symbol": "\ue0b0",
                 "properties": {
                 "fetch_stash_count": true,
-                "fetch_upstream_icon": false,
+                "fetch_upstream_icon": true,
                 "branch_icon": "\ue725 ",
                 "cherry_pick_icon": "\ue29b ",
                 "commit_icon": "\uf417 ",
@@ -44,9 +39,21 @@
                 "tag_icon": "\uf412 "
                 },
                 "style": "plain",
-                "template": " <#eeeeee>\u01c0</> {{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+                "template": " {{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
                 "type": "git"
             }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "right",
+        "segments": [
+          {
+            "foreground": "#838383",
+            "style": "plain",
+            "template": "{{- .CurrentDate | date .Format -}}",
+            "type": "time"
+          }
         ],
         "type": "prompt"
       },

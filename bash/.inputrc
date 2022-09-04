@@ -1,0 +1,4 @@
+$include /etc/inputrc
+
+#Colored prefix when listing completions.
+set colored-completion-prefix on
