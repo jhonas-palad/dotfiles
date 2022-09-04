@@ -114,7 +114,7 @@ if [ -x /usr/local/bin/oh-my-posh ]; then
     if [ -d ~/ompthemes ]; then
         eval "$(oh-my-posh init bash --config ~/ompthemes/jhonas2.omp.json)"
     else
-        eval "$(oh-my-posh init bash --config 'https://raw.githubusercontent.com/jhonas-palad/dotfiles/main/ohmyposh/jhonas2.omp.json')"
+        eval "$(oh-my-posh init bash --config 'https://raw.githubusercontent.com/jhonas-palad/dotfiles/main/ompthemes/jhonas2.omp.json')"
     fi
 fi
 
