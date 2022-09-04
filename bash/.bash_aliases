@@ -4,7 +4,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias cls='clear'
 
-alias neovim='nvim.appimage'
 alias py310='python3.10'
 
 #Drive variables
