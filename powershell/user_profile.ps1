@@ -48,7 +48,43 @@ function which($command){
 }
 
 
+function Clear-SavedHistory {
+	[CmdletBinding(ConfirmImpact='High', SupportsShouldProcess)]
+	param(    )
 
+	# Debugging: For testing you can simulate not having PSReadline loaded with
+	#            Remove-Module PSReadline -Force
+	$havePSReadline = ($null -ne (Get-Module -EA SilentlyContinue PSReadline))
+
+	Write-Verbose "PSReadline present: $havePSReadline"
+
+	$target = if ($havePSReadline) { "entire command history, including from previous sessions" } else { "command history" } 
+
+	if (-not $pscmdlet.ShouldProcess($target))
+	{
+			return
+	}
+
+	if ($havePSReadline) {
+		
+		Clear-Host
+
+		# Remove PSReadline's saved-history file.
+		if (Test-Path (Get-PSReadlineOption).HistorySavePath) { 
+			# Abort, if the file for some reason cannot be removed.
+			Remove-Item -EA Stop (Get-PSReadlineOption).HistorySavePath 
+			# To be safe, we recreate the file (empty). 
+			$null = New-Item -Type File -Path (Get-PSReadlineOption).HistorySavePath
+		}
+
+		# Clear PowerShell's own history 
+		
+
+	}
+
+	Clear-History
+
+}
 
 
 
