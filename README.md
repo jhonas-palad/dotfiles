@@ -7,6 +7,11 @@
 
 **pwsh**
 1. Install oh-my-posh
+
+    ```
+    winget install JanDeDobbeleer.OhMyPosh -s winget --location "D:\Program` Files\oh-my-posh"
+    ```
+
 2. Install Powershell modules
 
     ```
@@ -28,7 +33,11 @@
     ```
     New-Item -ItemType SymbolicLink -Path $env:USERPROFILE\.config -Name powershell -Target $env:DOTFILES_PATH\powershell
     ```
+6. Add a symlink pointing to our theme in `POSH_THEMES_PATH`
 
+    ```
+    New-Item -ItemType SymbolicLink -Path $env:POSH_THEMES_PATH\jhonas2.omp.json -Target $env:DOTFILES_PATH\ompthemes\jhonas2.omp.json
+    ```
 ## WSL
 
 **bash**

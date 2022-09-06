@@ -2,8 +2,11 @@ if( -not $env:DOTFILES_PATH){
 	[System.Environment]::SetEnvironmentVariable('DOTFILES_PATH', 'D:\dotfiles', [System.EnvironmentVariableTarget]::User)
 }
 
-#Use the remotely hosted config file
-oh-my-posh init pwsh --config "https://raw.githubusercontent.com/jhonas-palad/dotfiles/main/ompthemes/jhonas2.omp.json" | Invoke-Expression
+#Using the remotely hosted config file
+# oh-my-posh init pwsh --config "https://raw.githubusercontent.com/jhonas-palad/dotfiles/main/ompthemes/jhonas2.omp.json" | Invoke-Expression
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jhonas2.omp.json" | Invoke-Expression
+
 #Terminal-Icons
 Import-Module -Name Terminal-Icons
 
