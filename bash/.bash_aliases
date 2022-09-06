@@ -4,15 +4,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias cls='clear'
 
-alias py310='python3.10'
-
-#cpython_dev
-
-if [ -x ~/OpenSource/cpython/python ]; then
-	py_dev=~/OpenSource/cpython/python
-	export PY_DEV=$py_dev
-fi
-
 clear_history(){
     history -c
     cat /dev/null > $HISTFILE
