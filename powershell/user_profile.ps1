@@ -28,10 +28,10 @@ Set-Alias vim nvim
 Set-Alias grep findstr
 Set-Alias tig 'D:\Program Files\Git\usr\bin\tig.exe'
 Set-Alias less 'D:\Program Files\Git\usr\bin\less.exe'
-Set-Alias xampp_start 'D:\Program Files\xampp\xampp_start.exe'
-Set-Alias xampp_stop 'D:\Program Files\xampp\xampp_stop.exe'
-Set-Alias xampp-control 'D:\Program Files\xampp\xampp-control.exe'
-$xampp_dir='D:\Program Files\xampp'
+# Set-Alias xampp_start 'D:\Program Files\xampp\xampp_start.exe'
+# Set-Alias xampp_stop 'D:\Program Files\xampp\xampp_stop.exe'
+# Set-Alias xampp-control 'D:\Program Files\xampp\xampp-control.exe'
+# $xampp_dir='D:\Program Files\xampp'
 
 #Utilities
 function which($command){
