@@ -2,10 +2,6 @@ if( -not $env:DOTFILES_PATH){
 	[System.Environment]::SetEnvironmentVariable('DOTFILES_PATH', 'D:\dotfiles', [System.EnvironmentVariableTarget]::User)
 }
 
-# $omptheme="jhonas2"
-
-# oh-my-posh init pwsh --config "$env:DOTFILES_PATH\ohmyposh\$omptheme.omp.json" | Invoke-Expression
-
 #Use the remotely hosted config file
 oh-my-posh init pwsh --config "https://raw.githubusercontent.com/jhonas-palad/dotfiles/main/ompthemes/jhonas2.omp.json" | Invoke-Expression
 #Terminal-Icons
