@@ -45,7 +45,7 @@
 1. Remove current startup files with `rm` command. 
 
     ```
-    sudo rm -f {/root,~}/.{bashrc,bash_profile,bash_aliases,inputrc}
+    sudo rm -f {/root,~}/.{bashrc,profile,bash_profile,bash_aliases,inputrc}
     ```
 2. Create a symlink pointing to the startup files in home directory and root directory. 
     
