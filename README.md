@@ -45,12 +45,9 @@
 1. Remove current startup files with `rm` command. 
 
     ```
-<<<<<<< HEAD
-    sudo rm -f {/root,~}/.{bashrc,profile,bash_profile,bash_aliases,inputrc}
-=======
     sudo rm -f {/root,~}/.{bashrc,bash_profile,bash_aliases,bash_logout,inputrc,profile}
->>>>>>> 076fb7e (every login ssh-agent will prompt for ssh key passphrase, the ssh-agent process id will be terminated after logout)
     ```
+    
 2. Create a symlink pointing to the startup files in home directory and root directory. 
     
     ```
