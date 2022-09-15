@@ -7,6 +7,9 @@ if( -not $env:DOTFILES_PATH){
 
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jhonas2.omp.json" | Invoke-Expression
 
+#gsudo cmdlet
+Import-Module 'C:\Program Files (x86)\gsudo\gsudoModule.psd1'
+
 #Terminal-Icons
 Import-Module -Name Terminal-Icons
 
