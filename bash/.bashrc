@@ -118,4 +118,4 @@ if [ -x /usr/local/bin/oh-my-posh ]; then
     fi
 fi
 
-
+export GPG_TTY=$(tty)
