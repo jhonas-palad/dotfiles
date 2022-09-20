@@ -38,10 +38,11 @@
                     "tag_icon": "\uf412 ",
                     "branch_ahead_icon": "+",
                     "branch_behind_icon": "-",
-                    "branch_identical_icon": ""
+                    "branch_identical_icon": "",
+                    "branch_gone_icon": ""
                 },
                 "style": "plain",
-                "template": "{{ .HEAD }}{{ if .Working.Changed }}*{{ end }} {{ .BranchStatus }}",
+                "template": " {{ .HEAD }}{{ if .Working.Changed }}*{{ end }} {{ .BranchStatus }}",
                 "type": "git"
             }
         ],
