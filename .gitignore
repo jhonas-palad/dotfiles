@@ -1,3 +1,6 @@
 # invisible file on MacOs
 .DS_Store/
 .DS_Store
+
+#Vscode files
+.vscode/
