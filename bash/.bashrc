@@ -119,3 +119,5 @@ if [ -x /usr/local/bin/oh-my-posh ]; then
 fi
 
 export GPG_TTY=$(tty)
+
+export PATH=$HOME/bin:$PATH
