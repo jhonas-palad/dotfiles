@@ -37,7 +37,8 @@
                     "revert_icon": "\uf0e2 ",
                     "tag_icon": "\uf412 ",
                     "branch_ahead_icon": "+",
-                    "branch_behind_icon": "-"
+                    "branch_behind_icon": "-",
+                    "branch_identical_icon": ""
                 },
                 "style": "plain",
                 "template": "{{ .HEAD }}{{ if .Working.Changed }}*{{ end }} {{ .BranchStatus }}",
