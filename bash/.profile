@@ -10,7 +10,7 @@
 
 
 if [ -d "$HOME/.ssh" ]; then
-    eval $(ssh-agent)
+    eval $(ssh-agent) 1> /dev/null
 fi
 
 # if running bash
