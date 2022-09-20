@@ -7,6 +7,9 @@ if( -not $env:DOTFILES_PATH){
 
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jhonas2.omp.json" | Invoke-Expression
 
+#Disable py virtual env activate.ps1 prompt
+$Env:VIRTUAL_ENV_DISABLE_PROMPT=1
+
 #gsudo cmdlet
 Import-Module 'C:\Program Files (x86)\gsudo\gsudoModule.psd1'
 
