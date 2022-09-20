@@ -25,20 +25,22 @@
             {
                 "foreground": "#c53145",
                 "properties": {
-                "fetch_stash_count": true,
-                "fetch_upstream_icon": true,
-                "branch_icon": "\ue725 ",
-                "cherry_pick_icon": "\ue29b ",
-                "commit_icon": "\uf417 ",
-                "fetch_status": false,
-                "merge_icon": "\ue727 ",
-                "no_commits_icon": "\uf594 ",
-                "rebase_icon": "\ue728 ",
-                "revert_icon": "\uf0e2 ",
-                "tag_icon": "\uf412 "
+                    "fetch_stash_count": true,
+                    "fetch_upstream_icon": true,
+                    "branch_icon": "\ue725 ",
+                    "cherry_pick_icon": "\ue29b ",
+                    "commit_icon": "\uf417 ",
+                    "fetch_status": true,
+                    "merge_icon": "\ue727 ",
+                    "no_commits_icon": "\uf594 ",
+                    "rebase_icon": "\ue728 ",
+                    "revert_icon": "\uf0e2 ",
+                    "tag_icon": "\uf412 ",
+                    "branch_ahead_icon": "+",
+                    "branch_behind_icon": "-"
                 },
                 "style": "plain",
-                "template": " {{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+                "template": "{{ .HEAD }}{{ if .Working.Changed }}*{{ end }} {{ .BranchStatus }}",
                 "type": "git"
             }
         ],
@@ -47,10 +49,18 @@
       {
         "alignment": "right",
         "segments": [
+          
+          {
+            "type": "python",
+            "style": "plain",
+            "foreground": "#06a73b",
+            "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}\uE235 {{.Full}} {{ end }}{{ end}}<808080>:</>"
+
+          },
           {
             "foreground": "#838383",
             "style": "plain",
-            "template": "{{- .CurrentDate | date .Format -}}",
+            "template": " {{ .CurrentDate | date .Format }}",
             "type": "time"
           }
         ],
