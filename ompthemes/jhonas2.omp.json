@@ -80,7 +80,7 @@
                   "mapped_shell_names": {
                     "pwsh": "\uf054",
                     "bash": "\uf155",
-                    "zsh": "zsh"
+                    "zsh": "\udb84\ude78"
                   }
                 },
                 "template": "{{.Name}} "
