@@ -51,14 +51,6 @@
       {
         "alignment": "right",
         "segments": [
-          
-          {
-            "type": "python",
-            "style": "plain",
-            "foreground": "#06a73b",
-            "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}\uE235 {{.Full}} {{ end }}{{ end}}<808080>:</>"
-
-          },
           {
             "foreground": "#838383",
             "style": "plain",
@@ -71,7 +63,15 @@
       {
         "alignment": "left",
         "newline": true,
+        
         "segments": [
+            {
+              "type": "python",
+              "style": "plain",
+              "foreground": "#06a73b",
+              "template": "{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}({{.Venv }}) {{ end }}{{ end}}<808080></>"
+
+            },
             {
                 "type": "shell",
                 "style": "plain",
@@ -80,7 +80,7 @@
                   "mapped_shell_names": {
                     "pwsh": "\uf054",
                     "bash": "\uf155",
-                    "zsh": "\udb84\ude78"
+                    "zsh": "%"
                   }
                 },
                 "template": "{{.Name}} "
@@ -93,4 +93,3 @@
     ],
     "version": 2
   }
-  
