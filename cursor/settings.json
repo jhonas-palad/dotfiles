@@ -1,0 +1,161 @@
+{
+  "editor.suggestSelection": "first",
+  "editor.minimap.enabled": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.git": false,
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/desktop.ini": true
+  },
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "html.format.indentInnerHtml": true,
+  "files.associations": {
+    "*.html": "html",
+    "*.py": "python",
+    "*.css": "tailwindcss"
+  },
+  "html.format.enable": false,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu"]
+    }
+  },
+  "editor.fontFamily": "GeistMono Nerd Font Mono",
+  "editor.lineHeight": 24.5,
+  "editor.letterSpacing": 0,
+  "editor.suggestFontSize": 14,
+  "editor.fontSize": 14,
+  "editor.suggestLineHeight": 30,
+  "terminal.integrated.lineHeight": 1.2,
+  "editor.maxTokenizationLineLength": 10000000,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.external.osxExec": "Ghostty.app",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "editor.renderWhitespace": "all",
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[sass]": {
+    "editor.defaultFormatter": "syler.sass-indented"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "window.titleBarStyle": "custom",
+  "editor.multiCursorLimit": 60000,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "markdown.preview.": 14,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "cva"],
+  "tailwindCSS.emmetCompletions": true,
+  "typescript.tsserver.log": "off",
+  "javascript.validate.enable": true,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.colorCustomizations": {
+    "[Cursor Dark]": {
+      "editorStickyScroll.shadow": "#000000",
+      "sideBarStickyScroll.shadow": "#000000",
+      "menu.border": "#2a2a2a",
+      "menu.separatorBackground": "#2a2a2a",
+      "widget.border": "#2a2a2a",
+      "widget.shadow": "#000000",
+      "editorWidget.resizeBorder": "#2a2a2a",
+      "editorSuggestWidget.border": "#2a2a2a",
+      "editorSuggestWidget.foreground": "#cbcbcb",
+      "editorStickyScroll.border": "#2a2a2a"
+    }
+  },
+  "workbench.tree.indent": 12,
+  "window.zoomLevel": 0,
+  "npm-intellisense.importES6": true,
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.referencesCodeLens.showOnAllFunctions": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.showOnAllFunctions": true,
+  "references.preferredLocation": "view",
+  "debug.console.lineHeight": 1.5,
+  "workbench.settings.applyToAllProfiles": ["editor.fontFamily"],
+  "redhat.telemetry.enabled": true,
+  "workbench.sideBar.location": "right",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "Cargo.toml": "Cargo.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "github.copilot.enable": {
+    "*": false
+  },
+  "cursor.general.disableHttp2": true,
+  "workbench.editor.enablePreview": false,
+  "editor.hover.delay": 1000,
+  "workbench.hover.delay": 1000,
+  "workbench.sash.hoverDelay": 1000,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.composer.supportsTodos": false
+}
